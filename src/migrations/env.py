@@ -6,7 +6,7 @@ from sqlalchemy import pool
 from alembic import context
 
 from config import settings
-from database import Base, User, Task  # noqa
+from database.model import Base, User, Task  # noqa
 
 config = context.config
 config.set_main_option("sqlalchemy.url", settings.get_asyncpg_dsn + "?async_fallback=True")

@@ -1,11 +1,12 @@
-from src.database.session import async_session
 from sqlalchemy.exc import IntegrityError
+from sqlalchemy import select, update
+from typing import List
+
+from src.database.session import async_session
 from src.database.model import (
     User,
     Task,
 )
-from sqlalchemy import select, update
-from typing import List
 
 
 class AsyncCore:

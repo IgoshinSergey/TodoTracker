@@ -1,22 +1,20 @@
-from datetime import datetime
+from fastapi_users.db import SQLAlchemyBaseUserTable
 
 from sqlalchemy import ForeignKey
 from sqlalchemy.orm import DeclarativeBase, Mapped, mapped_column, relationship
+from datetime import datetime
 
 
 class Base(DeclarativeBase):
     pass
 
 
-class User(Base):
+class User(SQLAlchemyBaseUserTable[int], Base):
     __tablename__ = 'user'
 
     id: Mapped[int] = mapped_column(primary_key=True, autoincrement=True)
-    username: Mapped[str] = mapped_column(unique=True)
-    email: Mapped[str] = mapped_column(unique=True)
+    username: Mapped[str] = mapped_column(unique=False)
     created_at: Mapped[datetime] = mapped_column(default=datetime.now)
-    hashed_password: Mapped[str]
-    is_active: Mapped[bool] = mapped_column(default=True)
 
     tasks: Mapped[list["Task"]] = relationship("Task", back_populates="user")
 
@@ -32,4 +30,3 @@ class Task(Base):
 
     user_id: Mapped[int] = mapped_column(ForeignKey('user.id'))
     user: Mapped[User] = relationship("User", back_populates="tasks")
-
