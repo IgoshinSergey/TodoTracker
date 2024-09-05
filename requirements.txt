@@ -1,0 +1,10 @@
+fastapi
+fastapi-users[sqlalchemy]
+uvicorn
+pydantic
+pydantic_settings
+black
+sqlalchemy
+alembic
+asyncpg
+redis
