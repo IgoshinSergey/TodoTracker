@@ -1,33 +1,15 @@
 from sqlalchemy.exc import IntegrityError
-from sqlalchemy import select, update
+from sqlalchemy import select
 from typing import List
 
-from src.database.session import async_session
-from src.database.model import (
+from database.session import async_session
+from database.model import (
     User,
     Task,
 )
 
 
 class AsyncCore:
-    @staticmethod
-    async def insert_user(
-            username: str,
-            email: str,
-            password: str,
-    ):
-        async with async_session() as session:
-            user = User(
-                username=username,
-                email=email,
-                hashed_password=password,
-            )
-            try:
-                session.add(user)
-                await session.commit()
-            except IntegrityError:
-                await session.rollback()
-
     @staticmethod
     async def insert_task(
             description: str,
@@ -50,20 +32,8 @@ class AsyncCore:
             query = select(Task)
 
             for key, value in kwargs.items():
-                if hasattr(User, key):
+                if hasattr(Task, key):
                     query = query.where(getattr(Task, key) == value)
-
-            result = await session.execute(query)
-            return result.scalars().all()
-
-    @staticmethod
-    async def select_users(**kwargs) -> List["User"]:
-        async with async_session() as session:
-            query = select(User)
-
-            for key, value in kwargs.items():
-                if hasattr(User, key):
-                    query = query.where(getattr(User, key) == value)
 
             result = await session.execute(query)
             return result.scalars().all()

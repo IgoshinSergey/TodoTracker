@@ -5,8 +5,5 @@ export async function logout() {
             'Content-Type': 'application/json',
         },
     });
-    return {
-        status: response.status,
-        data: await response.json(),
-    };
+    return response.status;
 }

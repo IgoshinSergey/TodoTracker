@@ -3,13 +3,18 @@ from typing import AsyncGenerator
 from fastapi import Depends
 from fastapi_users.db import SQLAlchemyUserDatabase
 
-from sqlalchemy.ext.asyncio import create_async_engine, async_sessionmaker, AsyncSession
+from sqlalchemy.ext.asyncio import (
+    create_async_engine,
+    async_sessionmaker,
+    AsyncSession,
+    AsyncEngine
+)
 
 from database.model import User
 from config import settings
 
 
-async_engine = create_async_engine(
+async_engine: AsyncEngine = create_async_engine(
     url=settings.get_asyncpg_dsn,
     echo=False,
 )
