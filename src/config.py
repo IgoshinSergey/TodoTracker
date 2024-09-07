@@ -10,6 +10,8 @@ class Settings(BaseSettings):
     DB_USER: str
     DB_PASS: str
     DB_NAME: str
+    USER_MANAGER_SECRET_KEY: str
+    JWT_SECRET_KEY: str
 
     @property
     def get_asyncpg_dsn(self) -> str:

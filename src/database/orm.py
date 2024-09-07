@@ -2,6 +2,7 @@ from sqlalchemy.exc import IntegrityError
 from sqlalchemy import select
 from typing import List
 
+from server.schemas import TaskBase
 from database.session import async_session
 from database.model import (
     User,
@@ -11,10 +12,7 @@ from database.model import (
 
 class AsyncCore:
     @staticmethod
-    async def insert_task(
-            description: str,
-            user_id: int,
-    ):
+    async def insert_task(description: str, user_id: int):
         async with async_session() as session:
             task = Task(
                 description=description,
@@ -27,7 +25,7 @@ class AsyncCore:
                 await session.rollback()
 
     @staticmethod
-    async def select_tasks(**kwargs) -> List["Task"]:
+    async def select_tasks(**kwargs) -> List[TaskBase]:
         async with async_session() as session:
             query = select(Task)
 
@@ -36,7 +34,15 @@ class AsyncCore:
                     query = query.where(getattr(Task, key) == value)
 
             result = await session.execute(query)
-            return result.scalars().all()
+            result = result.scalars().all()
+            tasks = [
+                TaskBase(
+                    id=task.id,
+                    description=task.description,
+                    completed=task.completed
+                ) for task in result
+            ]
+            return tasks
 
     @staticmethod
     async def update_user_username(user_id: int, new_username: str):

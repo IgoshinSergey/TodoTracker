@@ -6,7 +6,9 @@ from fastapi_users import BaseUserManager, IntegerIDMixin
 from database.model import User
 from database.session import get_user_db
 
-SECRET = "SECRET"
+from config import settings
+
+SECRET = settings.USER_MANAGER_SECRET_KEY
 
 
 class UserManager(IntegerIDMixin, BaseUserManager[User, int]):
