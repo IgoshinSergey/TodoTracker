@@ -16,7 +16,7 @@ from config import settings
 
 async_engine: AsyncEngine = create_async_engine(
     url=settings.get_asyncpg_dsn,
-    echo=False,
+    echo=True,
 )
 
 async_session = async_sessionmaker(async_engine)

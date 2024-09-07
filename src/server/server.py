@@ -2,7 +2,6 @@ from fastapi import FastAPI, Depends
 from fastapi.staticfiles import StaticFiles
 from fastapi.responses import FileResponse
 
-from auth.schemas import UserRead, UserCreate
 from .routers import (
     api_router,
     auth_router,

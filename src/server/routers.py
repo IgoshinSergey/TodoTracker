@@ -27,6 +27,14 @@ current_active_user = fastapi_users.current_user(active=True)
 
 @api_router.get("/tasks", response_model=List[TaskBase])
 async def get_tasks(user: User = Depends(current_active_user)):
-    return await AsyncCore.select_tasks(user_id=user.id)
+    return await AsyncCore.select_tasks(
+        user_id=user.id
+    )
 
 
+@api_router.post("/tasks", response_model=TaskBase)
+async def new_task(description: str, user: User = Depends(current_active_user)):
+    return await AsyncCore.insert_task(
+        user_id=user.id,
+        description=description,
+    )

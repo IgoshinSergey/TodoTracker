@@ -12,17 +12,21 @@ from database.model import (
 
 class AsyncCore:
     @staticmethod
-    async def insert_task(description: str, user_id: int):
+    async def insert_task(description: str, user_id: int) -> TaskBase:
         async with async_session() as session:
-            task = Task(
+            task: Task = Task(
                 description=description,
                 user_id=user_id,
             )
-            try:
-                session.add(task)
-                await session.commit()
-            except IntegrityError:
-                await session.rollback()
+            session.add(task)
+            await session.flush()
+            result: TaskBase = TaskBase(
+                id=task.id,
+                description=task.description,
+                completed=task.completed
+            )
+            await session.commit()
+            return result
 
     @staticmethod
     async def select_tasks(**kwargs) -> List[TaskBase]:
@@ -45,7 +49,7 @@ class AsyncCore:
             return tasks
 
     @staticmethod
-    async def update_user_username(user_id: int, new_username: str):
+    async def update_username(user_id: int, new_username: str):
         async with async_session() as session:
             user = await session.get(User, user_id)
             user.username = new_username
