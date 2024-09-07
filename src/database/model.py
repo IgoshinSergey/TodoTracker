@@ -1,8 +1,13 @@
 from fastapi_users.db import SQLAlchemyBaseUserTable
+from datetime import datetime
 
 from sqlalchemy import ForeignKey
-from sqlalchemy.orm import DeclarativeBase, Mapped, mapped_column, relationship
-from datetime import datetime
+from sqlalchemy.orm import (
+    DeclarativeBase,
+    Mapped,
+    mapped_column,
+    relationship,
+)
 
 
 class Base(DeclarativeBase):

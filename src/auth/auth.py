@@ -1,9 +1,9 @@
+from config import settings
 from fastapi_users.authentication import (
     CookieTransport,
     JWTStrategy,
     AuthenticationBackend,
 )
-from config import settings
 
 cookie_transport = CookieTransport(cookie_max_age=3600)
 SECRET = settings.JWT_SECRET_KEY

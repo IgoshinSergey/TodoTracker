@@ -32,7 +32,7 @@ async def get_tasks(user: User = Depends(current_active_user)):
     )
 
 
-@api_router.post("/tasks", response_model=TaskBase)
+@api_router.post("/tasks", response_model=TaskBase, status_code=201)
 async def new_task(description: str, user: User = Depends(current_active_user)):
     return await AsyncCore.insert_task(
         user_id=user.id,
