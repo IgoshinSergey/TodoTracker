@@ -1,8 +1,11 @@
-from sqlalchemy import select
+from sqlalchemy import select, text
 from typing import List
 
 from server.schemas import TaskBase
-from database.session import async_session
+from database.session import (
+    async_session,
+    async_session_create_db,
+)
 from database.model import (
     User,
     Task,
@@ -10,6 +13,13 @@ from database.model import (
 
 
 class AsyncCore:
+    @staticmethod
+    async def create_db(db_name: str) -> None:
+        async with async_session_create_db() as session:
+            stmt = text("CREATE DATABASE :db_name;")
+            session.execute(stmt, db_name=db_name)
+            await session.commit()
+
     @staticmethod
     async def insert_task(description: str, user_id: int) -> TaskBase:
         async with async_session() as session:

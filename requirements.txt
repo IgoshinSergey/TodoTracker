@@ -5,6 +5,7 @@ pydantic
 pydantic_settings
 black
 sqlalchemy
+sqlalchemy-stubs
 alembic
 asyncpg
 redis

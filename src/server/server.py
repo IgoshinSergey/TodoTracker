@@ -25,9 +25,9 @@ app.include_router(
     prefix="/api",
     tags=["Api routers"],
 )
-app.mount("/static", StaticFiles(directory="./src/web_gui/auth"), name="static")
+app.mount("/static", StaticFiles(directory="./web_gui/auth"), name="static")
 
 
 @app.get('/')
 async def auth():
-    return FileResponse("./src/web_gui/auth/index.html")
+    return FileResponse("./web_gui/auth/index.html")

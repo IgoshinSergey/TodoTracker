@@ -15,12 +15,19 @@ from config import settings
 
 
 async_engine: AsyncEngine = create_async_engine(
-    url=settings.get_asyncpg_dsn,
+    url=settings.get_asyncpg_dsn_todo,
     echo=True,
 )
 
 async_session = async_sessionmaker(async_engine)
 
+
+async_engine_create_db: AsyncEngine = create_async_engine(
+    url=settings.get_asyncpg_dsn,
+    echo=True,
+)
+
+async_session_create_db = async_sessionmaker(async_engine_create_db)
 
 async def get_async_session() -> AsyncGenerator[AsyncSession, None]:
     async with async_session() as session:
