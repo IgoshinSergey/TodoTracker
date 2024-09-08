@@ -4,7 +4,7 @@ from typing import List
 from server.schemas import TaskBase
 from database.session import (
     async_session,
-    async_session_create_db,
+    async_engine_create_db,
 )
 from database.model import (
     User,
@@ -15,10 +15,14 @@ from database.model import (
 class AsyncCore:
     @staticmethod
     async def create_db(db_name: str) -> None:
-        async with async_session_create_db() as session:
-            stmt = text("CREATE DATABASE :db_name;")
-            session.execute(stmt, db_name=db_name)
-            await session.commit()
+        async with async_engine_create_db.begin() as conn:  # Use async with to manage the connection context
+            await conn.execute(text("commit"))
+            await conn.execute(text(f"CREATE DATABASE {db_name}"))
+
+        # conn = async_engine_create_db.connect()
+        # await conn.execute("COMMIT")
+        # await conn.execute(f"CREATE DATABASE IF NOT EXISTS {db_name}")
+        # await conn.close()
 
     @staticmethod
     async def insert_task(description: str, user_id: int) -> TaskBase:
