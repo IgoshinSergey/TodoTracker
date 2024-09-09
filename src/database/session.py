@@ -25,7 +25,6 @@ async_session = async_sessionmaker(async_engine)
 async_engine_create_db: AsyncEngine = create_async_engine(
     url=settings.get_asyncpg_dsn,
     echo=True,
-    isolation_level='AUTOCOMMIT'
 )
 
 
