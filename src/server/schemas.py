@@ -10,3 +10,12 @@ class TaskBase(BaseModel):
     id: int
     description: str
     completed: bool
+
+
+class TaskUpdate(BaseModel):
+    description: str
+    completed: bool
+
+
+class TaskCreate(BaseModel):
+    description: str

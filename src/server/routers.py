@@ -11,7 +11,12 @@ from auth.schemas import UserRead, UserCreate
 from database.model import User
 from database.orm import AsyncCore
 
-from server.schemas import TaskBase, UserBase
+from server.schemas import (
+    TaskUpdate,
+    TaskCreate,
+    TaskBase,
+    UserBase,
+)
 
 fastapi_users = FastAPIUsers[User, int](
     get_user_manager,
@@ -43,20 +48,19 @@ async def get_tasks(user: User = Depends(current_active_user)):
 
 @api_router.post("/tasks", response_model=TaskBase, status_code=201)
 async def new_task(
-        description: str,
+        data: TaskCreate,
         user: User = Depends(current_active_user),
 ):
     return await AsyncCore.insert_task(
         user_id=user.id,
-        description=description,
+        description=data.description,
     )
 
 
 @api_router.put("/tasks/{task_id}", response_model=TaskBase)
 async def update_task(
         task_id: int,
-        description: str,
-        completed: bool,
+        new_data: TaskUpdate,
         user: User = Depends(current_active_user),
 ):
     tasks = await AsyncCore.select_tasks(id=task_id, user_id=user.id)
@@ -65,7 +69,7 @@ async def update_task(
 
     updated_task = await AsyncCore.update_task(
         task_id=task_id,
-        new_description=description,
-        completed=completed,
+        new_description=new_data.description,
+        completed=new_data.completed,
     )
     return updated_task
