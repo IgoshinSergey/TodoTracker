@@ -44,7 +44,7 @@ class AsyncCore:
             for key, value in kwargs.items():
                 if hasattr(Task, key):
                     query = query.where(getattr(Task, key) == value)
-
+            query = query.order_by(Task.completed.asc(), Task.id.asc())
             result = await session.execute(query)
             result = result.scalars().all()
             tasks = [

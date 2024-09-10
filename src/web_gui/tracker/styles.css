@@ -5,8 +5,24 @@ body {
     padding: 20px;
 }
 
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+#logout-button {
+    padding: 10px 15px;
+    background-color: #dc3545; /* Цвет кнопки */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
 .container {
-    max-width: 600px;
+    max-width: 800px;
     margin: auto;
     background: white;
     padding: 20px;
@@ -14,16 +30,80 @@ body {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-h1, h2 {
+h1, h4 {
+    margin-top: 0;
+    margin-bottom: 0;
     color: #333;
 }
 
-#task-form, #task-list {
+.task-list h4 {
+    text-align: center;
+}
+
+.main-content {
+    display: flex;
+}
+
+.sidebar {
+    width: 30%;
+    height: min-content;
+    margin-right: 20px;
+}
+
+#user-info {
+    padding: 10px;
+    background-color: #f8f9fa;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#task-form {
+    padding: 10px;
+    background-color: #f8f9fa;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#task-statistics {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #f8f9fa;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.task-list {
+    flex-grow: 1;
+    height: min-content;
+    background-color: #f8f9fa;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+}
+
+#tasks {
+    margin-bottom: 0;
+}
+
+#task-form {
+    margin-top: 20px;
+    text-align: center;
+}
+
+#task-description {
+    margin-top: 10px;
+}
+
+#create-task-button {
     margin-top: 20px;
 }
 
 input[type="text"] {
-    width: calc(100% - 22px);
+    width: calc(100% - 23px);
     padding: 10px;
     margin-right: 10px;
 }
@@ -48,7 +128,7 @@ ul {
 
 li {
     background: #e9ecef;
-    margin: 5px 0;
+    margin: 5px 0 0;
     padding: 10px;
     border-radius: 5px;
     display: flex;

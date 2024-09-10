@@ -5,28 +5,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Todo Tracker</title>
     <link rel="stylesheet" href="tracker/styles.css">
+    <script src="tracker/script.js" type="module" defer></script>
 </head>
 <body>
     <div class="container">
-        <h1>Todo Tracker</h1>
-        <div id="user-info">
-            <h2>User: <span id="username"></span></h2>
-            <h2>Email: <span id="email"></span></h2>
+        <div class="header">
+            <h1>Todo Tracker</h1>
             <button id="logout-button">Logout</button>
         </div>
+        <div class="main-content">
+            <div class="sidebar">
+                <div id="user-info">
+                    <h4>User: <span id="username"></span></h4>
+                    <h4>Email: <span id="email"></span></h4>
+                </div>
+                <div id="task-statistics">
+                    <h4>Total Tasks: <span id="total-tasks"></span></h4>
+                    <h4>Completed Tasks: <span id="completed-tasks"></span></h4>
+                </div>
+                <div id="task-form">
+                    <h4>Create New Task</h4>
+                    <input type="text" id="task-description" placeholder="Description" required>
+                    <button id="create-task-button">Create Task</button>
+                </div>
+            </div>
 
-        <div id="task-form">
-            <h2>Create New Task</h2>
-            <input type="text" id="task-description" placeholder="Task description" required>
-            <button id="create-task-button">Create Task</button>
-        </div>
-
-        <div id="task-list">
-            <h2>Your Tasks</h2>
-            <ul id="tasks"></ul>
+            <div class="task-list">
+                <h4>Your Tasks</h4>
+                <ul id="tasks"></ul>
+            </div>
         </div>
     </div>
-
-    <script src="tracker/script.js" type="module" defer></script>
 </body>
 </html>

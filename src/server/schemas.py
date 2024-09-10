@@ -19,3 +19,8 @@ class TaskUpdate(BaseModel):
 
 class TaskCreate(BaseModel):
     description: str
+
+
+class TaskStatistic(BaseModel):
+    total_tasks: int
+    completed_tasks: int

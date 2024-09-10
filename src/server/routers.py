@@ -16,6 +16,7 @@ from server.schemas import (
     TaskCreate,
     TaskBase,
     UserBase,
+    TaskStatistic,
 )
 
 fastapi_users = FastAPIUsers[User, int](
@@ -42,7 +43,8 @@ async def get_user_data(user: User = Depends(current_active_user)):
 @api_router.get("/tasks", response_model=List[TaskBase])
 async def get_tasks(user: User = Depends(current_active_user)):
     return await AsyncCore.select_tasks(
-        user_id=user.id
+        user_id=user.id,
+        completed=False,
     )
 
 
@@ -73,3 +75,24 @@ async def update_task(
         completed=new_data.completed,
     )
     return updated_task
+
+
+@api_router.get("/tasks/statistics", response_model=TaskStatistic)
+async def task_statistics(user: User = Depends(current_active_user)):
+    all_tasks: list[TaskBase] = await AsyncCore.select_tasks(user_id=user.id)
+    completed_tasks: list[TaskBase] = await AsyncCore.select_tasks(user_id=user.id, completed=True)
+    return TaskStatistic(
+        total_tasks=len(all_tasks),
+        completed_tasks=len(completed_tasks),
+    )
+    pass
+#     tasks = await AsyncCore.select_tasks(id=task_id, user_id=user.id)
+#     if len(tasks) == 0:
+#         return JSONResponse(status_code=404, content={"detail": "Task not found"})
+#
+#     updated_task = await AsyncCore.update_task(
+#         task_id=task_id,
+#         new_description=new_data.description,
+#         completed=new_data.completed,
+#     )
+#     return updated_task
