@@ -1,0 +1,2 @@
+2024-09-13 14:48:16 - INFO - wrapper - Starting select_tasks
+2024-09-13 14:48:16 - INFO - wrapper - Функция: select_tasks вернула: [TaskBase(id=50, description='1234', completed=False)]

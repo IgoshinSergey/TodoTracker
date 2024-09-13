@@ -1,0 +1,46 @@
+name: task-tracker
+networks:
+  dev:
+
+services:
+  postgres:
+    image: postgres
+    restart: always
+    container_name: postgres_app
+    command: -p 8000
+    expose:
+      - 8000
+    env_file:
+      - ./backend/.env
+    environment:
+      POSTGRES_PASSWORD: ${DB_PASS}
+      POSTGRES_HOST_AUTH_METHOD: "trust"
+    networks:
+      - dev
+
+  redis:
+    image: redis
+    restart: always
+    container_name: redis_app
+    command: --port 8001
+    expose:
+      - 8001
+    env_file:
+      - ./backend/.env
+    networks:
+      - dev
+
+  app:
+    build:
+      context: ./backend
+    container_name: fastapi_app
+    command: ["/fastapi_app/script.sh"]
+    depends_on:
+      - postgres
+      - redis
+    ports:
+      - "8081:8080"
+    env_file:
+      - ./backend/.env
+    networks:
+      - dev

@@ -5,18 +5,62 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="86f112ca-0f80-4987-8071-4aa08b7d87ac" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/backend/logs/logger.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/backend/requirements.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/backend/script.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/backend/server/cache.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/backend/test.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/frontend/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/frontend/tracker/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/frontend/tracker/script.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/frontend/tracker/scripts/logout.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/frontend/tracker/scripts/tasks.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/frontend/tracker/scripts/user_data.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/frontend/tracker/styles.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/tracker/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/tracker/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/tracker/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/tracker/script.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/tracker/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/tracker/styles.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/database/orm.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/database/orm.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/server/routers.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/server/routers.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/server/schemas.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/server/schemas.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/web_gui/auth/scripts/logout.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/web_gui/tracker/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/web_gui/tracker/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/web_gui/tracker/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/web_gui/tracker/script.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/web_gui/tracker/scripts/tasks.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/web_gui/tracker/scripts/tasks.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/web_gui/tracker/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/web_gui/tracker/styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/alembic.ini" beforeDir="false" afterPath="$PROJECT_DIR$/src/backend/alembic.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/src/backend/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/src/docker-compose.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/auth/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/frontend/auth/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/auth/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/backend/web_gui/auth/script.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/auth/scripts/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/backend/web_gui/auth/scripts/login.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/auth/scripts/logout.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/auth/scripts/register.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/backend/web_gui/auth/scripts/register.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/auth/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/backend/web_gui/auth/styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/nginx.conf" beforeDir="false" afterPath="$PROJECT_DIR$/src/frontend/nginx.conf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/tracker/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/tracker/script.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/tracker/styles.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/.env" beforeDir="false" afterPath="$PROJECT_DIR$/src/backend/.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/auth/auth.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/backend/auth/auth.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/auth/manager.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/backend/auth/manager.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/auth/schemas.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/backend/auth/schemas.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/backend/config.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/create_db.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/backend/create_db.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/database/model.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/backend/database/model.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/database/orm.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/backend/database/orm.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/database/session.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/backend/database/session.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/backend/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/migrations/env.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/backend/migrations/env.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/migrations/script.py.mako" beforeDir="false" afterPath="$PROJECT_DIR$/src/backend/migrations/script.py.mako" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/migrations/versions/c48e72d1fc5d_create_tables.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/backend/migrations/versions/c48e72d1fc5d_create_tables.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/script.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/server/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/backend/server/app.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/server/routers.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/backend/server/routers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/server/schemas.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/backend/server/schemas.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/web_gui/auth/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/backend/web_gui/auth/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/web_gui/auth/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/frontend/auth/script.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/web_gui/auth/scripts/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/frontend/auth/scripts/login.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/web_gui/auth/scripts/register.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/frontend/auth/scripts/register.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/web_gui/auth/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/frontend/auth/styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/web_gui/tracker/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/backend/web_gui/tracker/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/web_gui/tracker/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/backend/web_gui/tracker/script.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/web_gui/tracker/scripts/logout.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/backend/web_gui/tracker/scripts/logout.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/web_gui/tracker/scripts/tasks.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/backend/web_gui/tracker/scripts/tasks.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/web_gui/tracker/scripts/user_data.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/backend/web_gui/tracker/scripts/user_data.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/web_gui/tracker/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/backend/web_gui/tracker/styles.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,10 +70,10 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Python Script" />
         <option value="HTML File" />
         <option value="CSS File" />
         <option value="JavaScript File" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
@@ -44,37 +88,40 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/sergey/school21/github/TodoTracker/src/web_gui&quot;,
-    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;database.query.execution&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "/home/sergey/school21/github/TodoTracker/src/frontend",
+    "list.type.of.created.stylesheet": "CSS",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "database.query.execution",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;postgresql&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "postgresql"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/frontend" />
+      <recent name="$PROJECT_DIR$/frontend" />
       <recent name="$PROJECT_DIR$/src/web_gui" />
       <recent name="$PROJECT_DIR$/frontend/auth" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/backend" />
+      <recent name="$PROJECT_DIR$/src" />
+      <recent name="$PROJECT_DIR$/src/logs" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/src/server" />
-      <recent name="$PROJECT_DIR$/src" />
-      <recent name="$PROJECT_DIR$/src/web_gui/auth" />
     </key>
   </component>
   <component name="SharedIndexes">
@@ -98,7 +145,9 @@
       <workItem from="1725700707727" duration="18082000" />
       <workItem from="1725819603802" duration="1633000" />
       <workItem from="1725821466292" duration="43309000" />
-      <workItem from="1725949683658" duration="28200000" />
+      <workItem from="1725949683658" duration="28479000" />
+      <workItem from="1726002257993" duration="4000" />
+      <workItem from="1726071510548" duration="33974000" />
     </task>
     <servers />
   </component>
