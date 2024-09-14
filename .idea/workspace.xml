@@ -5,7 +5,34 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="86f112ca-0f80-4987-8071-4aa08b7d87ac" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/src/backend/test.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/backend/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/src/backend/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/backend/create_db.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/backend/create_db.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/backend/migrations/env.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/backend/migrations/env.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/backend/server/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/backend/server/app.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/backend/server/cache.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/backend/server/cache.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/backend/web_gui/auth/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/backend/web_gui/auth/script.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/backend/web_gui/auth/scripts/login.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/backend/web_gui/auth/scripts/register.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/backend/web_gui/auth/styles.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/backend/web_gui/tracker/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/backend/web_gui/tracker/script.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/backend/web_gui/tracker/scripts/logout.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/backend/web_gui/tracker/scripts/tasks.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/backend/web_gui/tracker/scripts/user_data.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/backend/web_gui/tracker/styles.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/docker-compose.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/src/docker-compose.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/frontend/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/src/frontend/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/frontend/auth/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/frontend/auth/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/frontend/auth/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/frontend/auth/script.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/frontend/auth/scripts/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/frontend/auth/scripts/login.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/frontend/auth/scripts/register.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/frontend/auth/scripts/register.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/frontend/nginx.conf" beforeDir="false" afterPath="$PROJECT_DIR$/src/frontend/nginx.conf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/frontend/tracker/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/frontend/tracker/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/frontend/tracker/scripts/logout.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/frontend/tracker/scripts/logout.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/frontend/tracker/scripts/tasks.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/frontend/tracker/scripts/tasks.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/frontend/tracker/scripts/user_data.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/frontend/tracker/scripts/user_data.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,27 +60,27 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultHtmlFileTemplate": "HTML File",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "/home/sergey/school21/github/TodoTracker/src/frontend",
-    "list.type.of.created.stylesheet": "CSS",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "database.query.execution",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/sergey/school21/github/TodoTracker/src/frontend&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;database.query.execution&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "postgresql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;postgresql&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/frontend" />
@@ -92,7 +119,8 @@
       <workItem from="1725821466292" duration="43309000" />
       <workItem from="1725949683658" duration="28479000" />
       <workItem from="1726002257993" duration="4000" />
-      <workItem from="1726071510548" duration="34405000" />
+      <workItem from="1726071510548" duration="55900000" />
+      <workItem from="1726327184415" duration="427000" />
     </task>
     <servers />
   </component>

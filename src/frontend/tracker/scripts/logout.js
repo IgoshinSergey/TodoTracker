@@ -1,10 +1,11 @@
 export async function logout() {
     try {
-        const response = await fetch('/api/auth/jwt/logout', {
+        const response = await fetch('http://localhost:8080/api/auth/jwt/logout', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
             },
+            credentials: 'include'
         });
         window.location.href = '/';
     } catch (error) {

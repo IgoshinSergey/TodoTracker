@@ -5,7 +5,7 @@ export async function register(email, password, username) {
         username: username,
     };
 
-    const response = await fetch('http://localhost:8888/api/auth/register', {
+    const response = await fetch('http://localhost:8080/api/auth/register', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',

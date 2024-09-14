@@ -7,12 +7,13 @@ export async function login(username, password) {
     formData.append('client_id', '');
     formData.append('client_secret', '');
 
-    const response = await fetch('http://localhost:8888/api/auth/jwt/login', {
+    const response = await fetch('http://localhost:8080/api/auth/jwt/login', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/x-www-form-urlencoded',
         },
         body: formData.toString(),
+        credentials: 'include',
     });
     return response.status;
 }

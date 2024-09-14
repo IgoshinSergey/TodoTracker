@@ -15,6 +15,8 @@ services:
     environment:
       POSTGRES_PASSWORD: ${DB_PASS}
       POSTGRES_HOST_AUTH_METHOD: "trust"
+    ports:
+      - "8000:8000"
     networks:
       - dev
 
@@ -27,6 +29,8 @@ services:
       - 8001
     env_file:
       - ./backend/.env
+    ports:
+      - "8001:8001"
     networks:
       - dev
 
@@ -39,8 +43,19 @@ services:
       - postgres
       - redis
     ports:
-      - "8081:8080"
+      - "8080:8080"
     env_file:
       - ./backend/.env
+    networks:
+      - dev
+
+  frontend:
+    build:
+      context: ./frontend
+    container_name: web_app
+    depends_on:
+      - app
+    ports:
+      - "8081:8081"
     networks:
       - dev

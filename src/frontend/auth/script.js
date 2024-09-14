@@ -29,7 +29,7 @@ document.getElementById('registerForm').addEventListener('submit', async functio
     if (status === 201) {
         alert('Регистрация успешна!');
         await login(email, password);
-        window.location.href = '/welcome';
+        window.location.href = '/tracker/';
     } else if (status === 422) {
         alert('Некорректный email');
     } else {
@@ -46,7 +46,7 @@ document.getElementById('loginForm').addEventListener('submit', async function(e
     const status = await login(email, password);
     if (status === 204) {
         alert('Авторизация прошла успешно!');
-        window.location.href = '/welcome';
+        window.location.href = '/tracker/';
     } else {
         alert('Неверные данные.');
     }

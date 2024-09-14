@@ -32,3 +32,7 @@ async def increment_completed_tasks(email: str, increment: int = 1):
 
 async def close_redis():
     await redis.close()
+
+
+async def clear_redis():
+    await redis.flushdb()

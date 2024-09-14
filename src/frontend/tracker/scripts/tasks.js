@@ -1,10 +1,11 @@
 export async function fetchTasks() {
     try {
-        const response = await fetch('/api/tasks', {
+        const response = await fetch('http://localhost:8080/api/tasks', {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',
             },
+            credentials: 'include'
         });
         if (!response.ok) {
             window.location.href = '/';
@@ -18,11 +19,12 @@ export async function fetchTasks() {
 
 export async function fetchTaskStatistics() {
     try {
-        const response = await fetch('/api/tasks/statistics', {
+        const response = await fetch('http://localhost:8080/api/tasks/statistics', {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',
-            }
+            },
+            credentials: 'include'
         });
         if (response.ok) {
             const data = await response.json();
@@ -39,12 +41,13 @@ export async function createTask(description) {
         const newTask = {
             description: description,
         };
-        const response = await fetch('/api/tasks', {
+        const response = await fetch('http://localhost:8080/api/tasks', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
             },
             body: JSON.stringify(newTask),
+            credentials: 'include',
         });
         if (!response.ok) {
             window.location.href = '/';
@@ -62,12 +65,13 @@ async function updateTask(taskId, description, completed) {
             description: description,
             completed: completed
         };
-        const response = await fetch(`/api/tasks/${taskId}`, {
+        const response = await fetch(`http://localhost:8080/api/tasks/${taskId}`, {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json',
             },
             body: JSON.stringify(updatedTask),
+            credentials: 'include'
         });
         await fetchTaskStatistics();
     } catch (error) {

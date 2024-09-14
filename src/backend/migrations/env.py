@@ -9,7 +9,7 @@ from config import settings
 from database.model import Base, User, Task  # noqa
 
 config = context.config
-config.set_main_option("sqlalchemy.url", settings.get_asyncpg_dsn + "?async_fallback=True")
+config.set_main_option("sqlalchemy.url", settings.get_asyncpg_dsn_todo + "?async_fallback=True")
 
 if config.config_file_name is not None:
     fileConfig(config.config_file_name)
