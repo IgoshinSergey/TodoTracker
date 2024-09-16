@@ -9,5 +9,3 @@ sqlalchemy-stubs
 alembic~=1.13.2
 asyncpg
 redis~=5.0.8
-pytest
-pytest-asyncio

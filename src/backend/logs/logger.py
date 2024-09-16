@@ -1,5 +1,6 @@
 from functools import wraps
 import logging
+import os
 
 
 logger = logging.getLogger()
@@ -8,8 +9,9 @@ formatter = logging.Formatter(
     fmt="%(asctime)s - %(levelname)s - %(message)s",
     datefmt="%Y-%m-%d %H:%M:%S",
 )
+log_directory = os.path.join(os.path.dirname(__file__), '..', 'logs')
 
-file_handler = logging.FileHandler("logs/logs.log")
+file_handler = logging.FileHandler(os.path.join(log_directory, 'logs.log'))
 file_handler.setFormatter(formatter)
 
 logger.addHandler(file_handler)

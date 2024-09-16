@@ -13,7 +13,7 @@ services:
     env_file:
       - ./backend/.env
     environment:
-      POSTGRES_PASSWORD: ${DB_PASS}
+      POSTGRES_PASSWORD: postgres
       POSTGRES_HOST_AUTH_METHOD: "trust"
     ports:
       - "8000:8000"

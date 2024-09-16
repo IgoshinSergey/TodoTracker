@@ -52,16 +52,3 @@ app.add_middleware(
     allow_methods=["GET", "POST", "PUT", "DELETE", "PATCH"],
     allow_headers=["*"],
 )
-
-# app.mount("/auth", StaticFiles(directory="./web_gui/auth"), name="auth")
-# app.mount("/tracker", StaticFiles(directory="./web_gui/tracker"), name="tracker")
-#
-#
-# @app.get('/')
-# async def auth():
-#     return FileResponse("./web_gui/auth/index.html")
-#
-#
-# @app.get('/welcome')
-# async def welcome():
-#     return FileResponse("./web_gui/tracker/index.html")
