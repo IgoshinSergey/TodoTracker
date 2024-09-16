@@ -33,9 +33,7 @@ class AsyncCore:
             session.add(task)
             await session.flush()
             result: TaskBase = TaskBase(
-                id=task.id,
-                description=task.description,
-                completed=task.completed
+                id=task.id, description=task.description, completed=task.completed
             )
             await session.commit()
             return result
@@ -54,10 +52,9 @@ class AsyncCore:
             result = result.scalars().all()
             tasks = [
                 TaskBase(
-                    id=task.id,
-                    description=task.description,
-                    completed=task.completed
-                ) for task in result
+                    id=task.id, description=task.description, completed=task.completed
+                )
+                for task in result
             ]
             await session.commit()
             return tasks
@@ -72,7 +69,9 @@ class AsyncCore:
 
     @staticmethod
     @log_decorator()
-    async def update_task(task_id: int, new_description: str, completed: bool) -> TaskBase:
+    async def update_task(
+        task_id: int, new_description: str, completed: bool
+    ) -> TaskBase:
         async with async_session() as session:
             task = await session.get(Task, task_id)
             task.description = new_description
@@ -85,4 +84,3 @@ class AsyncCore:
             )
             await session.commit()
             return result
-

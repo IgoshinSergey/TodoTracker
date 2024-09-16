@@ -26,7 +26,7 @@ class Settings(BaseSettings):
     def get_asyncpg_dsn(self) -> str:
         return f"postgresql+asyncpg://{self.DB_USER}:{self.DB_PASS}@{self.DB_HOST}:{self.DB_PORT}/{self.DB_NAME_POSTGRES}"
 
-    model_config = SettingsConfigDict(env_file='./.env')
+    model_config = SettingsConfigDict(env_file="./.env")
 
 
 settings = Settings()

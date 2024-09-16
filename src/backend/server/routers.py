@@ -58,8 +58,8 @@ async def get_tasks(user: User = Depends(current_active_user)):
 
 @api_router.post("/tasks", response_model=TaskBase, status_code=201)
 async def new_task(
-        data: TaskCreate,
-        user: User = Depends(current_active_user),
+    data: TaskCreate,
+    user: User = Depends(current_active_user),
 ):
     await increment_total_tasks(user.email)
     return await AsyncCore.insert_task(
@@ -70,9 +70,9 @@ async def new_task(
 
 @api_router.put("/tasks/{task_id}", response_model=TaskBase)
 async def update_task(
-        task_id: int,
-        new_data: TaskUpdate,
-        user: User = Depends(current_active_user),
+    task_id: int,
+    new_data: TaskUpdate,
+    user: User = Depends(current_active_user),
 ):
     tasks = await AsyncCore.select_tasks(id=task_id, user_id=user.id)
     if len(tasks) == 0:
