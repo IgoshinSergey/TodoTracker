@@ -30,5 +30,5 @@
 
 ## Пример использования
 
-![]()
+![example](images/example.gif)
 
