@@ -12,7 +12,7 @@
 
 ## Технологии
 
-- **Python**, **FastAPI**, **SQLAlchemy**, **Alembic**, **Redis**, **Nginx**
+- **Python**, **FastAPI**, **SQLAlchemy**, **Alembic**, **Redis**, **Nginx**, **Docker**
 
 ## Установка и запуск
 
